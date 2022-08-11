@@ -1,24 +1,3 @@
-require 'pry-byebug'
-
-# def bubble_sort(unsorted_array)
-
-#     #Using nested loops so that we can run this sort until we sort the array
-#     unsorted_array.each do 
-#         unsorted_array.each_with_index do |element_before, index|
-#             #If the index is last element then we restart the loop
-#             if index == unsorted_array.length - 1
-#                 next
-#             end
-#             #swapping elements if they are out of order
-#             element_after = unsorted_array[index + 1]
-#             if element_before > element_after
-#                 unsorted_array[index] = element_after
-#                 unsorted_array[index + 1] = element_before
-#             end
-#             unsorted_array
-#         end
-#     end
-# end
 
 
 
@@ -51,6 +30,3 @@ def bubble_sort(unsorted_array)
     unsorted_array
 end
 
-
-
-p bubble_sort([5,4,3,2,1])
