@@ -1,10 +1,10 @@
 def bubble_sort(unsorted_array)
-    #sort checker makes stops our sort function when we have sorted the array
+    #sort checker stops our sort function when we have sorted the array
     sort_checker = unsorted_array.length - 1
     index = 0
     
     loop do
-        # Since after n number of iterations the last element is sorted we don't need to check for it
+        # Since after n number of iterations the last element is sorted we don't need to check for it thats why we diminish it by 1 when we reach the end of the array
         # next keyword is to avoid comparing last element with nil value
         if index == sort_checker
             index = 0
@@ -20,8 +20,7 @@ def bubble_sort(unsorted_array)
             unsorted_array[index + 1] = element_before
             index += 1
         else 
-            index += 1
-            
+            index += 1  
         end
         break if sort_checker < 0
     end
