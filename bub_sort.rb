@@ -31,7 +31,7 @@ def bubble_sort(unsorted_array)
         # Since after n number of iterations the last element is sorted we don't need to check for it
         if index == sort_checker
             index = 0
-            sort_checker - 2
+            sort_checker - 1
             next
             #swapping elements if they are out of order
         elsif unsorted_array[index] > unsorted_array[index + 1]
@@ -42,9 +42,10 @@ def bubble_sort(unsorted_array)
             index += 1
             
         end
-        binding.pry
-        break if sort_checker == 0
+        # binding.pry
+        break if sort_checker <= 0
     end
+    unsorted_array
 end
 
 
