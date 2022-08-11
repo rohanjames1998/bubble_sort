@@ -20,19 +20,19 @@ require 'pry-byebug'
 #     end
 # end
 
-p bubble_sort([10,9,8,7,6,5,4,3,2,1,0,0,0,1,2,3,4,10,9,8,7,6,5,4,3,])
 
 
 def bubble_sort(unsorted_array)
     #sort checker makes stops our sort function when we have sorted the array
-    sort_checker = unsorted_array.length
+    sort_checker = unsorted_array.length - 1
     index = 0
-
+    
     loop do
         # Since after n number of iterations the last element is sorted we don't need to check for it
         if index == sort_checker
             index = 0
-            sort_checker - 1
+            sort_checker - 2
+            next
             #swapping elements if they are out of order
         elsif unsorted_array[index] > unsorted_array[index + 1]
             unsorted_array[index + 1] = unsorted_array[index]
@@ -40,10 +40,13 @@ def bubble_sort(unsorted_array)
             index += 1
         else 
             index += 1
-
+            
         end
+        binding.pry
         break if sort_checker == 0
     end
 end
 
 
+
+p bubble_sort([5,4,3,2,1])
