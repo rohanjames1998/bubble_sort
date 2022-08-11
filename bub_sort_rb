@@ -33,3 +33,17 @@ def bubble_sort(unsorted_array)
         if index == sort_checker
             index = 0
             sort_checker - 1
+            #swapping elements if they are out of order
+        elsif unsorted_array[index] > unsorted_array[index + 1]
+            unsorted_array[index + 1] = unsorted_array[index]
+            unsorted_array[index] = unsorted_array[index + 1] 
+            index += 1
+        else 
+            index += 1
+
+        end
+        break if sort_checker == 0
+    end
+end
+
+
